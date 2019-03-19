@@ -65,7 +65,7 @@ console.log(typeof 'a string')
 console.log(typeof z)
 
 /****************************************
- * 3.Operatoror precedence
+ * 3.Operator of precedence
  */
 
 var now3 = 2018
@@ -106,3 +106,24 @@ console.log(average)
 
 average %= 5
 console.log(average)
+
+/****************************************
+ * 4.If/ else statements
+ */
+console.log('4.If/ else statements')
+var firstName4 = 'John'
+var civilStatus = 'single'
+
+if (civilStatus === 'married') {
+  console.log(firstName4 + ' is married!')
+} else {
+  console.log(firstName + ' will hopefully marry soon :).')
+}
+
+var isMarried = true
+
+if (isMarried) {
+  console.log(firstName4 + ' is married!')
+} else {
+  console.log(firstName + ' will hopefully marry soon :).')
+}
