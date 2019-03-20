@@ -182,6 +182,5 @@ switch (job) {
     break
   default:
     console.log('default statement')
-
     break
 }
