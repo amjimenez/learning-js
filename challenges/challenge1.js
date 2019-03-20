@@ -1,3 +1,7 @@
+/****************************************
+ * CODING CHALLENGE 1
+ */
+
 const john = {
   mass: 44,
   height: 1.7
