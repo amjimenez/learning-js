@@ -203,3 +203,37 @@ switch (true) {
     console.log(firstName5 + ' is a man.')
     break
 }
+
+/****************************************
+ *  7.Truthy and falsy values and equality operators.
+ */
+console.log(
+  '%c 7. Truthy and falsy values and equality operators.',
+  'background: #222; color: #bada55'
+)
+
+// Falsy values: undefined, null, 0 , '' , NaN
+// Truthy values: NOT falsy values
+
+var height
+//height = null
+height = 0
+//height = ''
+//height = Number('tomala')
+//height = 8
+
+if (height || height === 0) {
+  console.log('The variable is defined')
+} else {
+  console.log('The variable has not been defined.')
+}
+
+height = 23
+if (height == '23') {
+  console.log('The operator == does type coercion!')
+}
+
+//Strict equality operator
+if (height === '23') {
+  console.log('The operator === does not do type coercion!')
+}
