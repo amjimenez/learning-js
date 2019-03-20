@@ -1,6 +1,8 @@
-/**
- * Data Types
+/****************************************
+ * 1.Data Types
  */
+console.log('%c 1.Data Types ', 'background: #222; color: #bada55')
+
 var firstName = 'John'
 console.log(firstName)
 
@@ -38,9 +40,10 @@ console.log(b)
 // console.log(lastName2)
 
 /****************************************
- * Basic operators
+ * 2.Basic operators
  */
 
+console.log('%c 2.Basic operators', 'background: #222; color: #bada55')
 var year, yearJohn, yearkMark
 now = 2019
 ageJohn = 22
@@ -67,7 +70,7 @@ console.log(typeof z)
 /****************************************
  * 3.Operator of precedence
  */
-
+console.log('%c 3.Operator of precedence', 'background: #222; color: #bada55')
 var now3 = 2018
 var yearJohn = 1989
 var fullAge = 18
@@ -110,7 +113,8 @@ console.log(average)
 /****************************************
  * 4.If/ else statements
  */
-console.log('4.If/ else statements')
+console.log('%c 4.If/ else statements', 'background: #222; color: #bada55')
+
 var firstName4 = 'John'
 var civilStatus = 'single'
 
@@ -126,4 +130,58 @@ if (isMarried) {
   console.log(firstName4 + ' is married!')
 } else {
   console.log(firstName + ' will hopefully marry soon :).')
+}
+
+/****************************************
+ * 5.Boolean logic
+ */
+console.log('%c 5.Boolean logic', 'background: #222; color: #bada55')
+
+var firstName5 = 'Alan'
+var age5 = 22
+
+if (age5 < 13) {
+  console.log(firstName5 + ' is a boy.')
+} else if (age5 >= 13 && age5 < 20) {
+  console.log(firstName5 + ' is a teenager.')
+} else if (age5 >= 20 && age5 < 30) {
+  console.log(firstName5 + ' is a young man.')
+} else {
+  console.log(firstName5 + ' is a man.')
+}
+
+/****************************************
+ *  6.Ternary Operator  and Switch Statements
+ */
+console.log(
+  '%c 6.Ternary Operator  and Switch Statements',
+  'background: #222; color: #bada55'
+)
+
+var firstName6 = 'John'
+var age = 16
+
+age >= 18
+  ? console.log(firstName + ' drinks beer.')
+  : console.log(firstName + ' drinks juice.')
+
+var drink = age >= 18 ? 'beer' : 'juice'
+console.log(drink)
+
+var job = 'teacher'
+
+switch (job) {
+  case 'teacher':
+    console.log("You're a teacher")
+    break
+  case 'driver':
+    console.log("You're a driver")
+    break
+  case 'designer':
+    console.log("You're a designer")
+    break
+  default:
+    console.log('default statement')
+
+    break
 }
