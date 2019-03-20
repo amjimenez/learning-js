@@ -184,3 +184,22 @@ switch (job) {
     console.log('default statement')
     break
 }
+
+firstName5 = 'Alan'
+age5 = 15
+switch (true) {
+  case age5 < 13:
+    console.log(firstName5 + ' is a boy.')
+    break
+
+  case age5 >= 13 && age5 < 20:
+    console.log(firstName5 + ' is a teenager.')
+    break
+  case age5 >= 20 && age5 < 30:
+    console.log(firstName5 + ' is a young man.')
+    break
+
+  default:
+    console.log(firstName5 + ' is a man.')
+    break
+}
