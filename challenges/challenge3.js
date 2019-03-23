@@ -20,23 +20,24 @@ In the end, John would like to have 2 arrays:
 Good luck. 😄
  */
 
-console.log('%c Coding Challenge 2', 'background: #222; color: #bada55')
-var averageJohn = (89 + 120 + 103) / 3
-var averageMike = (116 + 94 + 123) / 3
-var averageMary = (97 + 134 + 105) / 3
+var originalBills = Array(124, 48, 268)
 
-console.log('averageJohn:', averageJohn)
-console.log('averageMike:', averageMike)
-console.log('averageMary:', averageMary)
+console.log('originalBills', originalBills)
 
-averageJohn = 3
-averageMike = 3
-averageMary = 4
+var tips = originalBills.map(bill => {
+  if (bill < 50) {
+    return bill * 0.2
+  } else if (bill < 200) {
+    return bill * 0.15
+  } else {
+    return bill * 0.1
+  }
+})
 
-averageJohn > averageMike && averageJohn > averageMary
-  ? console.log("John's team is the winner")
-  : averageMike > averageJohn && averageMike > averageMary
-  ? console.log("Mike's team is the winner")
-  : averageMary > averageJohn && averageMike < averageMary
-  ? console.log("Mary's team is the winner")
-  : console.log('There is a draw')
+console.log('tips', tips)
+
+var tipsAndBills = originalBills.map((bill, key) => {
+  return bill + tips[key]
+})
+
+console.log('tipsAndBills', tipsAndBills)
