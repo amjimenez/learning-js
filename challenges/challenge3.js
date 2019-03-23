@@ -20,6 +20,7 @@ In the end, John would like to have 2 arrays:
 Good luck. 😄
  */
 
+console.log('%c Coding Challenge 3', 'background: #222; color: #bada55')
 var originalBills = Array(124, 48, 268)
 
 console.log('originalBills', originalBills)

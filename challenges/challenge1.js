@@ -2,6 +2,7 @@
  * CODING CHALLENGE 1
  */
 
+console.log('%c Coding Challenge 1', 'background: #222; color: #bada55')
 const john = {
   mass: 44,
   height: 1.7
