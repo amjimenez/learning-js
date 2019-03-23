@@ -289,3 +289,32 @@ var getFullName = function(firstName, lastName) {
 }
 
 console.log(getFullName('Alexis', 'Jimenez'))
+
+/****************************************
+ *  10.Arrays.
+ */
+console.log('%c 10.Arrays', 'background: #222; color: #bada55')
+
+var names = ['John', 'Mark', 'Jane']
+var years = Array('John', 'Mark', 'Jane')
+
+console.log(names[2])
+console.log(names.length)
+names[1] = 'Ben'
+names[names.length] = 'Mary'
+console.log(names)
+
+//Different data types
+var mixedTypes = ['ssd', 400]
+
+mixedTypes.push(false)
+mixedTypes.unshift('firstElement')
+console.log('mixedTypes', mixedTypes)
+mixedTypes.pop()
+console.log('mixedTypes after pop', mixedTypes)
+mixedTypes.shift()
+console.log('mixedTypes after shift', mixedTypes)
+console.log('mixedTypes index of 400', mixedTypes.indexOf(400))
+
+var hasHDD = mixedTypes.indexOf('hdd') === -1 ? 'Does NOT have hdd' : 'has hdd'
+console.log(hasHDD)
