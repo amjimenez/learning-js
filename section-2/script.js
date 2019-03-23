@@ -237,3 +237,33 @@ if (height == '23') {
 if (height === '23') {
   console.log('The operator === does not do type coercion!')
 }
+
+/****************************************
+ *  8.Functions.
+ */
+console.log('%c 8.Functions', 'background: #222; color: #bada55')
+
+function calculateAge(birthYear) {
+  return 2019 - birthYear
+}
+
+var ageJohn = calculateAge(1990)
+var ageMary = calculateAge(1995)
+var ageMike = calculateAge(2001)
+
+console.log(ageJohn, ageMary, ageMike)
+
+function yearsUntilRetirement(year, firstName) {
+  var age = calculateAge(year)
+  var retirement = 65 - age
+  if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years.')
+  } else {
+    console.log(firstName + ' already retired.')
+  }
+}
+
+yearsUntilRetirement(1995, 'Alexis')
+yearsUntilRetirement(1992, 'Thomas')
+yearsUntilRetirement(1997, 'Raul')
+yearsUntilRetirement(1940, 'Mike')
