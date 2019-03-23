@@ -44,7 +44,7 @@ console.log(b)
  */
 
 console.log('%c 2.Basic operators', 'background: #222; color: #bada55')
-var year, yearJohn, yearkMark
+var year, yearJohn, yearMark
 now = 2019
 ageJohn = 22
 ageMark = 25
@@ -267,3 +267,25 @@ yearsUntilRetirement(1995, 'Alexis')
 yearsUntilRetirement(1992, 'Thomas')
 yearsUntilRetirement(1997, 'Raul')
 yearsUntilRetirement(1940, 'Mike')
+
+/****************************************
+ *  9.Function Statements and Expressions.
+ */
+console.log(
+  '%c 9.Function Statements and Expressions',
+  'background: #222; color: #bada55'
+)
+
+//Function declaration
+/**
+ *  Noting produced
+ *
+ */
+//function getFullName(firstName, lastName){}
+
+// Function expression
+var getFullName = function(firstName, lastName) {
+  return firstName + ' ' + lastName
+}
+
+console.log(getFullName('Alexis', 'Jimenez'))
