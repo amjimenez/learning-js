@@ -1,7 +1,10 @@
 /****************************************
  * 1.Data Types
  */
-console.log('%c 1.Data Types ', 'background: #222; color: #bada55')
+console.log(
+  '%c 1.Data Types ',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 var firstName = 'John'
 console.log(firstName)
@@ -43,7 +46,10 @@ console.log(b)
  * 2.Basic operators
  */
 
-console.log('%c 2.Basic operators', 'background: #222; color: #bada55')
+console.log(
+  '%c 2.Basic operators',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 var year, yearJohn, yearMark
 now = 2019
 ageJohn = 22
@@ -70,7 +76,10 @@ console.log(typeof z)
 /****************************************
  * 3.Operator of precedence
  */
-console.log('%c 3.Operator of precedence', 'background: #222; color: #bada55')
+console.log(
+  '%c 3.Operator of precedence',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 var now3 = 2018
 var yearJohn = 1989
 var fullAge = 18
@@ -113,7 +122,10 @@ console.log(average)
 /****************************************
  * 4.If/ else statements
  */
-console.log('%c 4.If/ else statements', 'background: #222; color: #bada55')
+console.log(
+  '%c 4.If/ else statements',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 var firstName4 = 'John'
 var civilStatus = 'single'
@@ -135,7 +147,10 @@ if (isMarried) {
 /****************************************
  * 5.Boolean logic
  */
-console.log('%c 5.Boolean logic', 'background: #222; color: #bada55')
+console.log(
+  '%c 5.Boolean logic',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 var firstName5 = 'Alan'
 var age5 = 22
@@ -155,7 +170,7 @@ if (age5 < 13) {
  */
 console.log(
   '%c 6.Ternary Operator  and Switch Statements',
-  'background: #222; color: #bada55'
+  'font-size: 16px; background: #222; color: #bada55'
 )
 
 var firstName6 = 'John'
@@ -209,7 +224,7 @@ switch (true) {
  */
 console.log(
   '%c 7. Truthy and falsy values and equality operators.',
-  'background: #222; color: #bada55'
+  'font-size: 16px; background: #222; color: #bada55'
 )
 
 // Falsy values: undefined, null, 0 , '' , NaN
@@ -241,7 +256,10 @@ if (height === '23') {
 /****************************************
  *  8.Functions.
  */
-console.log('%c 8.Functions', 'background: #222; color: #bada55')
+console.log(
+  '%c 8.Functions',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 function calculateAge(birthYear) {
   return 2019 - birthYear
@@ -273,7 +291,7 @@ yearsUntilRetirement(1940, 'Mike')
  */
 console.log(
   '%c 9.Function Statements and Expressions',
-  'background: #222; color: #bada55'
+  'font-size: 16px; background: #222; color: #bada55'
 )
 
 //Function declaration
@@ -293,7 +311,7 @@ console.log(getFullName('Alexis', 'Jimenez'))
 /****************************************
  *  10.Arrays.
  */
-console.log('%c 10.Arrays', 'background: #222; color: #bada55')
+console.log('%c 10.Arrays', 'font-size: 16px; background: #222; color: #bada55')
 
 var names = ['John', 'Mark', 'Jane']
 var years = Array('John', 'Mark', 'Jane')
@@ -322,7 +340,10 @@ console.log(hasHDD)
 /****************************************
  *  11.Object and properties.
  */
-console.log('%c 11.Object and properties', 'background: #222; color: #bada55')
+console.log(
+  '%c 11.Object and properties',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 //Object literal defining with the following syntax
 var alexis = {
@@ -353,7 +374,10 @@ console.log(gloria)
 /****************************************
  *  12.Objects and Methods.
  */
-console.log('%c 12.Objects and Methods', 'background: #222; color: #bada55')
+console.log(
+  '%c 12.Objects and Methods',
+  'font-size: 16px; background: #222; color: #bada55'
+)
 
 var alexis = {
   firstName: 'Alexis',
@@ -368,3 +392,55 @@ var alexis = {
 
 console.log(alexis)
 alexis.calcAge()
+
+/****************************************
+ *  13.Loops and Iteration.
+ */
+console.log(
+  '%c 13.Loops and Iteration',
+  'font-size: 16px; background: #222; color: #bada55'
+)
+
+for (let i = 0; i < 10; i++) {
+  console.log(i)
+}
+
+var alex = ['Alex', 'Jimenez', 1995, 'teacher', false, 'last']
+console.log('%c for loop', 'background: rgb(241, 250, 114); color: #000')
+for (let i = 0; i < alex.length; i++) {
+  console.log(alex[i])
+}
+
+// While
+console.log('%c while', 'background: rgb(241, 250, 114); color: #000')
+var i = 0
+while (i < alex.length) {
+  console.log(alex[i])
+  i++
+}
+
+//continue and break statements
+console.log(
+  '%c For using continue',
+  'background: rgb(241, 250, 114); color: #000'
+)
+for (let i = 0; i < alex.length; i++) {
+  if (typeof alex[i] !== 'string') continue
+  console.log(alex[i])
+}
+
+console.log()
+
+console.log('%c for using break', 'background: rgb(241, 250, 114); color: #000')
+for (let i = 0; i < alex.length; i++) {
+  if (typeof alex[i] !== 'string') break
+  console.log(alex[i])
+}
+
+console.log(
+  '%c for-loop backwards',
+  'background: rgb(241, 250, 114); color: #000'
+)
+for (let i = alex.length - 1; i >= 0; i--) {
+  console.log(alex[i])
+}
