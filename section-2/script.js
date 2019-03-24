@@ -318,3 +318,53 @@ console.log('mixedTypes index of 400', mixedTypes.indexOf(400))
 
 var hasHDD = mixedTypes.indexOf('hdd') === -1 ? 'Does NOT have hdd' : 'has hdd'
 console.log(hasHDD)
+
+/****************************************
+ *  11.Object and properties.
+ */
+console.log('%c 11.Object and properties', 'background: #222; color: #bada55')
+
+//Object literal defining with the following syntax
+var alexis = {
+  firstName: 'Alexis',
+  lastName: 'McDonald',
+  birthYear: 1993,
+  family: ['Tomas', 'Clark', 'Run'],
+  job: 'Teacher',
+  isMarried: false,
+  hasFiancee: true
+}
+
+console.log(alexis.firstName)
+console.log(alexis['lastName'])
+var x = 'hasFiancee'
+console.log(alexis[x])
+
+alexis.job = 'developer'
+alexis['lastName'] = 'Olivares'
+console.log(alexis)
+
+//new Object syntax
+var gloria = new Object()
+gloria.firstName = 'Gloria'
+gloria['cellphone'] = '23232312'
+console.log(gloria)
+
+/****************************************
+ *  12.Objects and Methods.
+ */
+console.log('%c 12.Objects and Methods', 'background: #222; color: #bada55')
+
+var alexis = {
+  firstName: 'Alexis',
+  lastName: 'Jimenez',
+  birthYear: 1993,
+  family: ['Thomas', 'Raul', 'Frank'],
+  job: 'Teacher',
+  calcAge: function() {
+    this.age = 2019 - this.birthYear
+  }
+}
+
+console.log(alexis)
+alexis.calcAge()
