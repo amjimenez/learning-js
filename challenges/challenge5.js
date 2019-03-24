@@ -51,25 +51,82 @@ var john = {
   bills: [124, 48, 268, 180, 42],
   calculateTips: function() {
     for (let i = 0; i < this.bills.length; i++) {
+      console.log(this.bills[i])
+
       var currentBill = this.bills[i]
       var tip = 0
-      switch (1) {
+      switch (true) {
         case currentBill < 50:
           tip = currentBill * 0.2
           break
-        case currentBill > 50 && currentBill <= 100:
+        case currentBill >= 50 && currentBill < 200:
           tip = currentBill * 0.15
           break
-        case currentBill > 100:
+        case currentBill >= 200:
           tip = currentBill * 0.1
           break
         default:
           break
       }
       this.tips[i] = tip
-      this.total = tip + currentBill
+      this.total[i] = tip + currentBill
     }
   }
 }
 john.calculateTips()
 console.log(john)
+
+function calculateMarkTip(currentBill) {
+  switch (true) {
+    case currentBill < 100:
+      tip = currentBill * 0.2
+      break
+    case currentBill >= 100 && currentBill <= 300:
+      tip = currentBill * 0.1
+      break
+    case currentBill > 300:
+      tip = currentBill * 0.25
+      break
+    default:
+      break
+  }
+  return tip
+}
+var mark = {
+  tips: [],
+  total: [],
+  bills: [77, 375, 110, 45]
+}
+
+for (let i = 0; i < mark.bills.length; i++) {
+  var currentBill = mark.bills[i]
+
+  var tip = calculateMarkTip(currentBill)
+  mark.tips[i] = tip
+  mark.total[i] = currentBill + tip
+}
+
+console.log('mark', mark)
+
+function calcAverage(tips) {
+  var sum = 0
+  for (let i = 0; i < tips.length; i++) {
+    sum += tips[i]
+  }
+  return sum / tips.length
+}
+
+console.log('johnAverage using simple for', calcAverage(john.total))
+console.log('markAverage using simple for', calcAverage(mark.total))
+
+var markAverage =
+  mark.total.reduce(function(prev, current, index) {
+    return prev + current
+  }) / mark.total.length
+var johnAverage =
+  john.total.reduce(function(prev, current, index) {
+    return prev + current
+  }) / john.total.length
+
+console.log('johnAverage using reduce', johnAverage)
+console.log('markAverage using reduce', markAverage)
