@@ -95,3 +95,36 @@ console.log(
   '%c 4.The this keyword',
   'font-size: 16px; background: #222; color: #bada55'
 )
+
+console.log(this)
+
+calculateAge(1990)
+
+function calculateAge(year) {
+  console.log(2016 - year)
+  console.log(this)
+}
+
+var alex = {
+  name: 'Alex',
+  yearsOfBirth: 1990,
+  calculateAge: function() {
+    console.log(this)
+    console.log(2019 - this.yearsOfBirth)
+    /*    function hello() {
+      console.log(this)
+    }
+    hello() */
+  }
+}
+
+alex.calculateAge()
+
+var mike = {
+  name: 'Mike',
+  yearsOfBirth: 1995
+}
+
+mike.calculateAge = alex.calculateAge
+
+mike.calculateAge()
